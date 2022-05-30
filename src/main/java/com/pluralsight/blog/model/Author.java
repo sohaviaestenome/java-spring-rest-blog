@@ -18,7 +18,9 @@ public class Author {
     private Long id;
     private String firstname;
     private String lastname;
+    @JsonIgnore
     private String username;
+    @JsonIgnore
     private String password;
 
     @OneToMany
@@ -60,7 +62,7 @@ public class Author {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-    @JsonIgnore
+
     public String getUsername() {
         return username;
     }
@@ -68,7 +70,7 @@ public class Author {
     public void setUsername(String username) {
         this.username = username;
     }
-    @JsonIgnore
+
     public String getPassword() {
         return password;
     }
